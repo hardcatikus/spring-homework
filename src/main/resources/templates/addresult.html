@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Input of User Data</title>
+</head>
+<body>
+    <h1>Добавлен новый пользователь</h1>
+    <p th:text="'Фамилия: ' + ${user.lastName}" />
+    <p th:text="'Имя: ' + ${user.firstName}" />
+    <p th:text="'Отчество: ' + ${user.patronymicName}" />
+    <p th:text="'Возраст: ' + ${user.age}" />
+    <p th:text="'Уровень зарплаты: ' + ${user.salaryLevel}" />
+    <p th:text="'E-mail: ' + ${user.email}" />
+    <p th:text="'Место работы: ' + ${user.placeOfWork}" />
+    <a href="/adduser">Добавить еще одного пользователя</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Input of User Data</title>
+</head>
+<body>
+<h1>Добавление пользователя</h1>
+<form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
+    <p>Фамилия: <input type="text" th:field="*{lastName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></p>
+    <p>Имя: <input type="text" th:field="*{firstName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></p>
+    <p>Отчество: <input type="text" th:field="*{patronymicName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></p>
+    <p>Возраст: <input type="text" th:field="*{age}" min="1" max="99" pattern="[1-9]{0,1}[0-9]{1,1}" required="true"/></p>
+    <p>Уровень зарплаты: <input type="text" th:field="*{salaryLevel}" min="0" max="10000000" required="true"/></p>
+    <p>E-mail: <input type="text" th:field="*{email}" /></p>
+    <p>Место работы: <input type="text" th:field="*{placeOfWork}" /></p>
+    <p><input type="submit" value="Добавить" /> <input type="reset" value="Очистить" /></p>
+</form>
+</body>
+</html>
