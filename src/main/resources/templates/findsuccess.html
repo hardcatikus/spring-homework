@@ -19,6 +19,9 @@
     <h3>Данные клиента</h3>
     <p th:text="'Текущее время: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}" />
     <p th:text="'Браузер: ' + ${#httpServletRequest.getHeader('User-Agent')}"/>
+    <form action="#" th:action="@{/sendemail/{toemail}(toemail=${user.email})}" method="get">
+        <p><input type="submit" value="Написать сообщение" /></p>
+    </form>
     <a href="/finduser">Найти другого пользователя</a>
 </body>
 </html>
