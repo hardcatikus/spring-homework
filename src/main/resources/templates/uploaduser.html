@@ -3,13 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Uploading File with User Data</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Загрузка данныех пользователя из файла *.csv</h1>
+<div class="container">
+    <p><a href="/"><-Назад</a></p>
+    <h1>Загрузка данных пользователя из файла *.csv</h1>
     <form method="post" th:action="@{/uploaduser}" enctype="multipart/form-data">
         <input type="file" name="file">
         <p><button type="submit">Загрузить файл</button></p>
     </form>
     <p th:text="${message}" th:if="${message ne null}" class="alert alert-primary"></p>
+</div>
 </body>
 </html>

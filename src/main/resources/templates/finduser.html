@@ -3,13 +3,25 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Searching of User Data</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Добавление пользователя</h1>
+<div class="container">
+<p><a href="/"><-Назад</a></p>
+<h1>Поиск пользователя</h1>
 <form action="#" th:action="@{/finduser}" th:object="${user}" method="post">
-    <p>Фамилия: <input type="text" th:field="*{lastName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></p>
-    <p>Имя: <input type="text" th:field="*{firstName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></p>
+    <table>
+        <tr>
+            <td>Фамилия: </td>
+            <td><input type="text" th:field="*{lastName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></td>
+        </tr>
+        <tr>
+            <td>Имя: </td>
+            <td><input type="text" th:field="*{firstName}" pattern="[A-Za-zА-Яа-яЁё]{2,40}" required="true"/></td>
+        </tr>
+    </table>
     <p><input type="submit" value="Найти" /> <input type="reset" value="Очистить" /></p>
 </form>
+</div>
 </body>
 </html>

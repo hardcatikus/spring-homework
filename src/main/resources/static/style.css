@@ -1,0 +1,45 @@
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif;
+    color: #222;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+h1 {
+    text-align: left;
+}
+
+a { color: #2d12d3; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    table-layout: fixed;
+    width: 350px;
+}
+
+td {
+    width: 20px;
+    vertical-align: top;
+    border: 0;
+    padding: 2px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}

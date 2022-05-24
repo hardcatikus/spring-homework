@@ -44,6 +44,7 @@ public class UploadController {
         try {
             Path path = Paths.get(UPLOAD_DIR + CSV_FILE_NAME);
             Files.copy(file.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
+            CSVHandler.copyToCSV(path);
         }
         catch (IOException e) {
             e.printStackTrace();

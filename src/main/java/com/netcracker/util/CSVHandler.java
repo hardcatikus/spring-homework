@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class CSVHandler {
@@ -67,6 +68,19 @@ public class CSVHandler {
         }
 
         return extension;
+    }
+
+    public static void copyToCSV(Path path){
+        try {
+            Reader reader = Files.newBufferedReader(path);
+            CSVReader csvReader = new CSVReader(reader);
+            String[] currentLine = csvReader.readNext();
+            writeToCSV(currentLine,true);
+        } catch (IOException | CsvValidationException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 }
